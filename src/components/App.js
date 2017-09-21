@@ -83,6 +83,7 @@ class App extends Component {
 
           <SelectBox filterHogs={this.handleChange}/>
           <HogContainer hogs={this.state.hogs}/>
+          
       </div>
     )
   }
