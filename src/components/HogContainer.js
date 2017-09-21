@@ -10,7 +10,7 @@ export default class HogContainer extends React.Component{
   render(){
 
     return(
-      <div className="ui link four stackable cards">
+      <div>
         {this.allHogs()}
       </div>
     )

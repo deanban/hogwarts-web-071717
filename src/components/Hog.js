@@ -8,7 +8,7 @@ export default class Hog extends React.Component{
 
 	render(){
 		return(
-			<div className="pigTile">
+			<div className='pigTile'>
 				<div className="header">{this.props.name}</div>
 			    <div className="hogs">
 	            	<p>Specialty: {this.props.specialty}</p>
