@@ -10,11 +10,16 @@ export default class Hog extends React.Component{
     	}
 	}
 
-	handleClick = () => {
+	handleMouseOver = () => {
     	this.setState({
       	display: !(this.state.display)
     	})
   	}
+
+  	handleMouseOut = () =>{
+    	this.setState({
+      	display: false
+    	})  	}
 
 	greasedOrNot = () =>{
 		return this.props.greased ? 'Yes' : 'Oil me baby!'
@@ -23,11 +28,11 @@ export default class Hog extends React.Component{
 	hogImage = () => {
     	let hogName = this.props.name.replace(/\s/g, '_') + '.jpg'
     	return `./hog-imgs/${hogName}`
-  }
+  	}
 
 	render(){
 		return(
-			<div className='fade' onClick={this.handleClick}>
+			<div className='fade' onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut}>
 				<div className='pigTile'>
 					<div className="">
 	          			<img src={this.hogImage()}/>
@@ -39,7 +44,7 @@ export default class Hog extends React.Component{
 		            	<p className='normalText'>Weight as a ratio: {this.props["weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water"]}</p>
 		            	<p className='achievementText'>Highest Medal Achieved: {this.props['highest medal achieved']}</p>
 		          	</div>
-		          	
+
 		          	: null}
 
 		        	</div>
